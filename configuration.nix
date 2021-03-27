@@ -53,7 +53,6 @@
 
   # Configure keymap in X11
   services.xserver.layout = "hu";
-  # services.xserver.xkbOptions = "caps:escape"; # FIXME does not work in Pantheon, resolved in postinstall.sh
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -77,9 +76,6 @@
   
   programs.zsh.enable=true;
 
-  # By default emacs crashes in pantheon
-  # environment.variables.XLIB_SKIP_ARGB_VISUALS="1";
-
   # Battery management
   services.tlp.enable = true;
 
@@ -89,13 +85,14 @@
     wget
     neovim
     brave
-    ripgrep fd clang cmake emacs # TODO: enable needed emacs packages (cmake is for compiling vterm)
+    ripgrep fd clang gnumake emacs
     coreutils
     git
     mpv
     youtube-dl
     neofetch
     htop
+    fzf
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
